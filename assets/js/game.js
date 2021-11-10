@@ -163,14 +163,23 @@ switch (shopOptionPrompt) {
   }
 };
 
+// function to set name
+var getPlayerName = function () {
+  var name = "";
+
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+  console.log("Your robot's name is " + name);
+  return name;
+};
+
 /* End game functions */
 
 /* GAME INFORMATION / VARIABLES */
 
-// player information
-
 var playerInfo = {
-  name: window.prompt("What is your robot's name?"),
+  name: getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
